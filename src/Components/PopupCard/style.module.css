@@ -1,0 +1,41 @@
+.container {
+    height: 80px;
+    display: grid;
+    grid-template-areas: 'img text-container'
+    'img price-container';
+    grid-template-columns: 1fr 2fr;
+    gap: 5px 15px;
+    align-content: center;
+}
+
+.img {
+    object-fit: contain;
+    height: 64px;
+    width: 64px;
+    grid-area: img;
+}
+
+.text-container {
+    display: flex;
+    column-gap: 15px;
+    grid-area: 'text-container';
+}
+
+.title {
+    font-weight: 500;
+}
+
+.weight {
+    font-size: 15px;
+    color: rgba(134, 142, 150, 1)
+}
+
+.price-container {
+    grid-area: 'price-container';
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    margin-right: auto;
+}

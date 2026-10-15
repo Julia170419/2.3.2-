@@ -1,0 +1,19 @@
+.main {
+    max-width: 100%;
+    padding: 28px 80px 120px;
+    margin-top: 60px;
+    background-color: rgba(243, 245, 250, 1);
+}
+
+.title {
+    color: black;
+    text-align: left;
+}
+
+.vegetable-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-left: 0;
+}

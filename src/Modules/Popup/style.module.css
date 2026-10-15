@@ -1,0 +1,49 @@
+.dialog {
+    box-sizing: border-box;
+    width: 444px;
+    min-height: 268px;
+    max-height: 536px;
+    padding: 24px;
+    overflow: hidden;
+}
+
+.dialog-empty {
+    width: 301px;
+    height: 227px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty {
+    color: rgba(134, 142, 150, 1);
+    font-weight: 400;
+}
+
+.cart-list {
+    overflow-y: auto;
+    list-style: none;
+    max-height: 420px;
+    overflow: scroll;
+}
+
+.cart-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.total-price {
+    box-sizing: border-box;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    height: 46px;
+    background-color: white;
+}

@@ -1,0 +1,12 @@
+.root {
+    color: #212529;
+    background-color: rgba(222, 226, 230, 1);
+}
+
+.root[disabled] {
+  color: grey;
+}
+
+.buttons {
+  gap: 10px
+}
