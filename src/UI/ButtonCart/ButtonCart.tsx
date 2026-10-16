@@ -1,11 +1,9 @@
 import { Button } from '@mantine/core';
 import { type ReactNode } from 'react';
-import type { VegetableCard } from '../../types/VegetableCard';
 import style from './style.module.css'
 import classNames from 'classnames';
 
 type ButtonProps = {
-  item?: VegetableCard,
     text: string,
     color: string,
     textColor: string
@@ -14,7 +12,7 @@ type ButtonProps = {
     onClick: () => void
 }
 
-export default function ButtonCart ({ item, text, color, leftSection, rightSection, textColor, onClick }: ButtonProps) {
+export default function ButtonCart ({ text, color, leftSection, rightSection, textColor, onClick }: ButtonProps) {
   return <Button 
   className={style.button}
   style={{ '--text-color': textColor } as React.CSSProperties}
@@ -23,5 +21,6 @@ export default function ButtonCart ({ item, text, color, leftSection, rightSecti
   </span>}
   rightSection={rightSection}
     color={color}
-    onClick={onClick}>{text}</Button>
+    onClick={onClick}>{text}
+    </Button>
 }

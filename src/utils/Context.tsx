@@ -7,7 +7,7 @@ type ContextType = {
     basket: VegetableCard[];
     addBasket: (vegetable: VegetableCard) => void;
     plusOneBasket: (veg: VegetableCard) => void;
-    minusOneBasket: (id: number) => void;
+    minusOneBasket: (veg: VegetableCard) => void;
 }
 export const CustomContext = createContext<ContextType | null>(null)
 
@@ -54,15 +54,15 @@ export const Context = ({ children }: ContextProps) => {
     });
     };
     
-    const minusOneBasket = (id: number) => {
+    const minusOneBasket = (veg: VegetableCard) => {
         setBasket(prev => {
-            const item = prev.find(item => item.id === id);
+            const item = prev.find(item => item.id === veg.id);
             if (!item) return prev;
             if (item.count === 1) {
-                return prev.filter(item => item.id !== id)
+                return prev.filter(item => item.id !== veg.id)
             }
             return prev.map(item => 
-                item.id === id ? {...item, count: item.count - 1} : item
+                item.id === veg.id ? {...item, count: item.count - 1} : item
             )
         })
     }

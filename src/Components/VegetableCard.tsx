@@ -57,7 +57,6 @@ let count = cartItem?.count ?? 0;
       <Group justify="space-between" mt="md" mb="xs">
         <Text fw={500}>$ {count ? price * count : price}</Text>
         <ButtonCart 
-        item={{ id, name, image, price, count }}
         onClick={() => addBasket({id, name, image, price, count})}
               text='Add to cart'
               color='#DBF2E0'
